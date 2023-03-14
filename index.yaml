@@ -3,7 +3,17 @@ entries:
   myapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-14T12:15:20.305676+01:00"
+    created: "2023-03-14T13:07:11.405037+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 33e39b29ebe30e31cdb0bc5fd2da77c671f40a46ebdc0b795a93918cc9cb0bbc
+    name: myapp
+    type: application
+    urls:
+    - https://anirvanr.github.io/helm-chart/myapp-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-14T13:07:11.404253+01:00"
     description: A Helm chart for Kubernetes
     digest: b8b62d1fca44b67e6e042412fde226f2e1571409bf6d8ffe9fd23da4941fc8a3
     name: myapp
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://anirvanr.github.io/helm-chart/myapp-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-14T12:15:20.302679+01:00"
+generated: "2023-03-14T13:07:11.402611+01:00"
