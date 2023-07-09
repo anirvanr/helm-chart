@@ -1,0 +1,14 @@
+{{- if gt .Values.replicaCount 1.0 }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "blueprint.fullname" . }}
+  labels:
+  {{- include "blueprint.labels" . | nindent 4 }}
+spec:
+  minAvailable: {{ .Values.pdb.minAvailable }}
+  maxUnavailable: {{ .Values.pdb.maxUnavailable }}
+  selector:
+    matchLabels:
+      {{- include "blueprint.selectorLabels" . | nindent 8 }}
+{{- end }}
