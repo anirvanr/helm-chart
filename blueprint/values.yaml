@@ -61,6 +61,10 @@ service:
   # Target port of the service
   #nodePort: 30012
   # NodePort for the service (only applicable if service type is NodePort)
+  loadBalancerIP: ""
+  # Load balancer IP for the Service (optional, cloud specific)
+  loadBalancerSourceRanges: []
+  # Enable client source IP preservation
   annotations: {}
   # Annotations to add to the service
 
@@ -79,7 +83,7 @@ ingress:
     - host: chart-example.local
       paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: Prefix
   # Ingress host and paths
   tls: []
   # TLS configuration for the ingress
