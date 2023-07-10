@@ -38,17 +38,18 @@ podAnnotations: {}
 podSecurityContext:
   {}
   # Security context for the pod
-  # fsGroup: 2000
+  # fsGroup: 1001
 
-securityContext:
+containerSecurityContext:
   {}
   # Security context for the container
   # capabilities:
   #   drop:
   #   - ALL
-  # readOnlyRootFilesystem: true
+  # runAsUser: 1001
+  # runAsGroup: 1001
   # runAsNonRoot: true
-  # runAsUser: 1000
+  # allowPrivilegeEscalation: false
 
 service:
   type: ClusterIP
@@ -158,9 +159,7 @@ pdb:
   maxUnavailable: ""
   # Maximum number of pods that can be unavailable during disruptions
 
-env:
-  {}
-  #  MY_ENV: 'value'
+extraEnvVars:
   # appFrontendUrl: "http://localhost:8080"
 
 nodeSelector: {}

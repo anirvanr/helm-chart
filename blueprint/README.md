@@ -35,7 +35,7 @@ The following table lists the configurable parameters of the Helm chart and thei
 | `serviceAccount.name`                        | The name of the service account to use                                        | `""`                  |
 | `podAnnotations`                             | Annotations to add to the pod                                                 | `{}`                  |
 | `podSecurityContext`                         | Security context for the pod                                                  | `{}`                  |
-| `securityContext`                            | Security context for the container                                            | `{}`                  |
+| `containerSecurityContext`                   | Security context for the container                                            | `{}`                  |
 | `service.type`                               | Service type (ClusterIP, NodePort, LoadBalancer)                              | `ClusterIP`           |
 | `service.externalTrafficPolicy`              | External traffic policy for the service                                       | `""`                  |
 | `service.port`                               | Service port                                                                  | `80`                  |
