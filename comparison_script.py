@@ -1,18 +1,3 @@
-"""
-The script performs a comparison between the data in the values.yaml file and the content of the README.md file. 
-It prints the keys from values.yaml and indicates their presence in the README.md file. 
-If a key is found in the README.md file, it is displayed in green color, indicating that it is present. 
-If a key is not found in the README.md file, it is displayed in red color, indicating that it is not found.
-
-"""
-# Check dependency for ruamel.yaml
-try:
-    import ruamel.yaml
-except ImportError:
-    print("Error: ruamel.yaml module not found.")
-    print("Please install ruamel.yaml module using 'pip install ruamel.yaml'.")
-    sys.exit(1)
-    
 import sys
 import os
 import ruamel.yaml
